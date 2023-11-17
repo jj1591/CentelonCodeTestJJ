@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import cent.qa.pages.HomePage;
@@ -45,6 +46,11 @@ public class TestBase {
 	public void setUp() {
 		initialization();
 
+	}
+	
+	@AfterMethod
+	public void tearDown(){
+		driver.quit();
 	}
 	
 	public static void initialization(){

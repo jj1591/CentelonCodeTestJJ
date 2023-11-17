@@ -4,6 +4,7 @@ import cent.qa.base.TestBase;
 import cent.qa.pages.HomePage;
 import cent.qa.util.DataGenerator;
 
+
 public class CreateCustomerAccountSteps extends TestBase{
 	
 	public static void CreateCustomerandLogin() {
@@ -11,14 +12,17 @@ public class CreateCustomerAccountSteps extends TestBase{
 		String randNum = String.valueOf(DataGenerator.generateRandomNumber(999));
 		String randNum1 = String.valueOf(DataGenerator.generateRandomNumber(999));
 		String firstname = "Test"+randNum;
-		String lastnamename = "Name"+randNum1;
+		String lastname = "Name"+randNum1;
 		String email = "testname"+randNum+"@centelon.com";
 		String password = "Centelon"+randNum+"@*";
 		HomePage homepage= new HomePage();
 		homepage.clickSignInLink()
 		.navigateToCreateAccount()
-		.createCustomerAccount(firstname,lastnamename, email, password, password);
+		.createCustomerAccount(firstname,lastname, email, password, password)
+		.verifyUserName(firstname, lastname);
 		
 	}
+	
+
 
 }

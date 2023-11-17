@@ -39,13 +39,13 @@ public class CreateCustomerAccountPage extends TestBase{
 	}
 	
 	public LandingPage createCustomerAccount(String firstname,String lastname,String email, String password,String passwordconfirmation){
-		firstNameTxtbx.sendKeys(firstname);
-		lastNameTxtbx.sendKeys(lastname);
-		emailTxtbx.sendKeys(email);
-		passwordTxtbx.sendKeys(password);
-		passwordConfirmationTxtbx.sendKeys(passwordconfirmation);
-		createAccountBtn.click();
-		return new LandingPage();
+			firstNameTxtbx.sendKeys(firstname);
+			lastNameTxtbx.sendKeys(lastname);
+			emailTxtbx.sendKeys(email);
+			passwordTxtbx.sendKeys(password);
+			passwordConfirmationTxtbx.sendKeys(passwordconfirmation);
+			createAccountBtn.click();
+			return new LandingPage();
 	}
 	
 	public void enterFirstname(String username){
